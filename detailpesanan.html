@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style/styleheader.css">
+    <link rel="stylesheet" href="style/stylepesanansaya.css">
+    <div id="header"></div>
+    <script src="handler/header.js"></script>
+</head>
+
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <!-- Content -->
+    <main class="p-4">
+        <div class="bg-white p-4 rounded-lg shadow max-w-3xl mx-auto">
+            <!-- Product -->
+            <div class="mb-6">
+                <div class="mb-4 text-center">
+                    <img id="productImage" class="product-image mx-auto" src="" alt="Loading..." />
+                </div>
+                <h2 id="productName" class="text-2xl font-bold text-purple-600 text-center mb-6">Loading...</h2>
+                <p class="text-2xl font-semibold text-green-600 text-center" id="productPrice">Rp 0</p>
+                <div class="flex justify-center items-center space-x-4 py-6">
+                    <button id="decrementButton" class="text-purple-600 px-4 text-3xl font-bold bg-gray-200">-</button>
+                        <span id="quantity" class="text-2xl" >1</span>
+                    <button id="incrementButton" class="text-purple-600 px-3 text-2xl font-bold bg-gray-200">+</button>
+                </div>                
+            </div>
+
+           <!-- Address -->
+            <section class="mb-6">
+                <h3 class="text-sm font-semibold mb-2 text-purple-600">Alamat Pengiriman</h3>
+                <p id="userName" class="font-semibold">Loading...</p>
+                <p id="userPhone">Loading...</p>
+                <p id="userAddress">Loading...</p>
+            </section>
+
+            <!-- Shipping -->
+            <section class="mb-6">
+                <h3 class="text-sm font-semibold mb-2 text-purple-600">Pengiriman</h3>
+                <p>RAX Speed Delivery</p>
+            </section>
+
+            <!-- Price Breakdown -->
+            <section>
+                <div class="flex justify-between">
+                    <span>Subtotal</span>
+                    <span id="subtotal">0</span>
+                </div>
+                <div class="flex justify-between">
+                    <span>Ongkos Kirim</span>
+                    <span>Rp10.000</span>
+                </div>
+                <div class="flex justify-between">
+                    <span>Biaya Admin</span>
+                    <span id="adminprice">0</span>
+                </div>
+                <hr class="my-2">
+                <div class="flex justify-between font-semibold">
+                    <span>Total</span>
+                    <span id="total">0</span>
+                </div>
+                <div style="font-size: small; text-align: right;">
+                    <span>*Belum termasuk biaya transaksi</span>
+                </div>
+            </section>
+            <!-- Tombol Pesan -->
+            <div class="flex justify-center mt-6">
+                <button id="payButton" class="bg-purple-600 text-white py-2 px-4 rounded-lg shadow hover:bg-purple-700 w-1/2">Bayar</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Midtrans Script -->
+    <script type="text/javascript"
+    src="https://app.sandbox.midtrans.com/snap/snap.js"
+data-client-key="SB-Mid-client-ucDi_uzKHwggASyt"></script>
+
+<!-- JavaScript -->
+<script type="module" src="handler/detailpesanan.js"></script>
+<script src="payment-gateway/server.js"></script>
+<script src="payment-gateway/placeOrder.js"></script>
+
+</body>
+</html>

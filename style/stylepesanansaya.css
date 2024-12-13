@@ -1,0 +1,44 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Arial', sans-serif;
+  background-color: #f3f4f6;
+}
+
+.content {
+  flex: 1;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #6b46c1;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+.popup-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 50;
+  width: 90%;
+  max-width: 400px;
+}
+.stars span {
+  margin-right: 8px;
+  color: gray;
+}
+.stars span.selected {
+  color: gold;
+}
