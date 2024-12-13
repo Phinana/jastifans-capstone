@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f3f4f6;
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.product-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  display: block;
+  margin: 0 auto;
+}
+
+.product-details {
+  text-align: center;
+}
+
+h1 {
+  color: #5c2d91;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.price {
+  font-size: 1.5rem;
+  color: #ff5722;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.order-button {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #5c2d91;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.order-button:hover {
+  background-color: #4a2373;
+}
+
+.order-button:active {
+  background-color: #361859;
+}
+
+.recommendation-contentbased {
+  margin-top: 2rem;
+}
+
+.recommendation-title {
+  font-size: 1.3rem;
+  color: #2d3748;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+  padding-top: 4;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.product-grid .product-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.product-grid .product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.product-grid .product-card p {
+  font-size: 0.875rem;
+  color: #5c2d91;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 3px;
+  }
+
+  .price {
+    font-size: 1.25rem;
+  }
+
+  .recommendation-title {
+    font-size: 1.25rem;
+  }
+}
