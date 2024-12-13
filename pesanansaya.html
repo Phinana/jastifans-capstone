@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style/stylepesanansaya.css">
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <div id="header"></div>
+    <script src="handler/header.js"></script>
+
+    <!-- Product Table Section -->
+    <section class="py-8 bg-white">
+        <div class="container mx-auto px-4 text-center">
+        <h4 id="title_cari" class="text-3xl font-bold text-gray-800 mb-6">Pesanan Saya</h4>
+
+        <div class="overflow-x-auto">
+            <table id= "ordersTableBody" class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-100 text-left">
+                        <th class="px-4 py-2 border-b">ID Produk</th>
+                        <th class="px-4 py-2 border-b">Nama Jastip</th>
+                        <th class="px-4 py-2 border-b">Nama Produk</th>
+                        <th class="px-2 py-2 border-b">Harga</th>
+                        <th class="px-2 py-2 border-b">Jumlah Produk</th>
+                        <th class="px-2 py-2 border-b">Harga Total</th>
+                        <th class="px-4 py-2 border-b">Status Pengiriman</th>
+                        <th class="px-4 py-2 border-b">Tanggal Update</th>
+                        <th class="px-4 py-2 border-b"></th>
+                    </tr>
+                </thead>
+                <tbody id="product-table">
+                    <!-- Data produk akan ditambahkan menggunakan JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+<!-- Popup Rating -->
+<div id="rating-popup" class="hidden">
+    <div class="popup-content bg-white p-6 rounded shadow-md">
+        <h2 class="text-lg font-bold mb-4">Rate Your Order</h2>
+        <p>Pesanan: <span id="order-id-display" class="font-medium"></span></p>
+        <div id="star-rating" class="stars mt-4 flex">
+            <span onclick="setRating(1)" class="text-3xl cursor-pointer">★</span>
+            <span onclick="setRating(2)" class="text-3xl cursor-pointer">★</span>
+            <span onclick="setRating(3)" class="text-3xl cursor-pointer">★</span>
+            <span onclick="setRating(4)" class="text-3xl cursor-pointer">★</span>
+            <span onclick="setRating(5)" class="text-3xl cursor-pointer">★</span>
+        </div>
+        <input type="hidden" id="rating-value" value="0">
+        <div class="mt-6">
+            <button onclick="submitRating()" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Submit</button>
+            <button onclick="closeRatingPopup()" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Cancel</button>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Import pesanan.js -->
+    <script type="module" src="handler/pesanansaya.js"></script>
+</body>
+
+</html>
